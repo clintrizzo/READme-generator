@@ -8,37 +8,62 @@ function user() {
     return inquirer.prompt([{
             type: "input",
             message: "What is the title of your project?",
-            name: "title",
+            name: "Title",
         },
 
         {
             type: "input",
-            message: "What is the title of your project?",
-            name: "title",
+            message: "Give a description of your project",
+            name: "Description",
         },
 
         {
             type: "input",
-            message: "What is the title of your project?",
-            name: "title",
+            message: "Describe in the installations for the project if none are required type 'none' ",
+            name: "Installation",
         },
 
         {
             type: "input",
-            message: "What is the title of your project?",
-            name: "title",
+            message: "How would you like your app to be used?",
+            name: "Usage",
         },
 
         {
             type: "input",
-            message: "What is the title of your project?",
-            name: "title",
+            message: "Who are the contributers to this project?",
+            name: "Contributers",
+        },
+
+        {
+            type: "checkbox",
+            message: "Choose a license for the project",
+            //https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94/
+            choices: [
+                "MIT",
+                "Apache",
+                "GPLv2",
+                "BSD",
+                "None",
+            ]
         },
 
         {
             type: "input",
-            message: "What is the title of your project?",
-            name: "title",
-        }
+            message: "Who are the contributers to this project?",
+            name: "Contributers",
+        },
+
+        {
+            type: "input",
+            message: "Who are the contributers to this project?",
+            name: "Contributers",
+        },
+
+        {
+            type: "input",
+            message: "Who are the contributers to this project?",
+            name: "Contributers",
+        },
     ])
 }
