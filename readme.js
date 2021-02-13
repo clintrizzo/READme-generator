@@ -67,7 +67,7 @@ function promptUser() {
 function generateMarkdown(response) {
     //https://shields.io/category/license(for the licenses)
     return `
-    # ${Title}
+    # ${user.Title}
     
     #Table of Contents
     
@@ -102,13 +102,53 @@ function generateMarkdown(response) {
     For additional information or questions please reach out to my email: ${response.Email}
     `
 }
+
+function generateMarkdown(response) {
+    //https://shields.io/category/license(for the licenses)
+    return `
+    # ${response.Title}
+    
+    #Table of Contents
+    
+    - [Description](#Description)
+    - [Installation](#Installation)
+    - [Usage](#usage)
+    - [Contributing](#Contributers)
+    - [Test](#Test)
+    - [Licenses](#License)
+    - [Responses](#Responses)
+    
+    ## Description:
+    ![License](https://img.shields.io/badge/License-${response.License}-red.svg "License Badge")
+    ${response.Description}
+    
+    ## Installation:
+    ${response.Installation}
+    
+    ## Usage:
+    ${response.Usage}
+    
+    ## Contributers:
+    ${response.Contributers}
+
+    ## Test:
+    ${response.Test}
+
+    ## Questions:
+    For more information see my GitHub page
+    - [Profile](github.com/${response.UserName})
+
+    For additional information or questions please reach out to my email: ${response.Email}
+    `
+}
+
 async function init() {
     try {
         const response = await promptUser();
 
         const readMe = generateMarkdown(response);
 
-        await writeFileSync("README.md", readMe)
+        await writeFileAsync("README.md", readMe)
         console.log("Responses are completed")
     } catch (err) {
         console.log(err);
