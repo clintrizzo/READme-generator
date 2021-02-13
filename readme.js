@@ -37,6 +37,12 @@ function promptUser() {
         },
 
         {
+            type: "input",
+            message: "How do you test to see if the app is working properly",
+            name: "Test",
+        },
+
+        {
             type: "checkbox",
             message: "Choose a license for the project",
             //https://www.freecodecamp.org/news/how-open-source-licenses-work-and-how-to-add-them-to-your-projects-34310c3cf94/
@@ -96,46 +102,7 @@ function generateMarkdown(response) {
     ${response.Test}
 
     ## Questions:
-    For more information see my GitHub page
-    - [Profile](https://github.com/${response.UserName})
-
-    For additional information or questions please reach out to my email: ${response.Email}
-    `
-}
-
-function generateMarkdown(response) {
-    //https://shields.io/category/license(for the licenses)
-    return `
-    # ${response.Title}
-    
-    #Table of Contents
-    
-    - [Description](#Description)
-    - [Installation](#Installation)
-    - [Usage](#usage)
-    - [Contributing](#Contributers)
-    - [Test](#Test)
-    - [Licenses](#License)
-    - [Responses](#Responses)
-    
-    ## Description:
-    ![License](https://img.shields.io/badge/License-${response.License}-red.svg "License Badge")
-    ${response.Description}
-    
-    ## Installation:
-    ${response.Installation}
-    
-    ## Usage:
-    ${response.Usage}
-    
-    ## Contributers:
-    ${response.Contributers}
-
-    ## Test:
-    ${response.Test}
-
-    ## Questions:
-    For more information see my GitHub page
+    To see deployed site look at my GitHub page
     - [Profile](github.com/${response.UserName})
 
     For additional information or questions please reach out to my email: ${response.Email}
