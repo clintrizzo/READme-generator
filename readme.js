@@ -1,11 +1,11 @@
 const inquirer = require('inquirer');
-const resources = require("source.js");
 const fs = require("fs");
+//https://www.npmjs.com/package/util
 const util = require("util");
-//https://www.geeksforgeeks.org/node-js-fs-writefilesync-method/
-const writeFileSync = util.promisify(fs.writeFile);
+//https://www.codota.com/code/javascript/functions/fs/writeFileAsync
+const writeFileAsync = util.promisify(fs.writeFile);
 
-function user() {
+function promptUser() {
     return inquirer.prompt([{
             type: "input",
             message: "What is the title of your project?",
@@ -20,7 +20,7 @@ function user() {
 
         {
             type: "input",
-            message: "Describe in the installations for the project if none are required type 'none' ",
+            message: "Describe the installation for the project if none are required type 'none' ",
             name: "Installation",
         },
 
@@ -63,3 +63,56 @@ function user() {
         },
     ])
 }
+
+function generateMarkdown(response) {
+    //https://shields.io/category/license(for the licenses)
+    return `
+    # ${Title}
+    
+    #Table of Contents
+    
+    - [Description](#Description)
+    - [Installation](#Installation)
+    - [Usage](#usage)
+    - [Contributing](#Contributers)
+    - [Test](#Test)
+    - [Licenses](#License)
+    - [Responses](#Responses)
+    
+    ## Description:
+    ![License](https://img.shields.io/badge/License-${response.License}-red.svg "License Badge")
+    ${response.Description}
+    
+    ## Installation:
+    ${response.Installation}
+    
+    ## Usage:
+    ${response.Usage}
+    
+    ## Contributers:
+    ${response.Contributers}
+
+    ## Test:
+    ${response.Test}
+
+    ## Questions:
+    For more information see my GitHub page
+    - [Profile](https://github.com/${response.UserName})
+
+    For additional information or questions please reach out to my email: ${response.Email}
+    `
+}
+async function init() {
+    try {
+        const response = await promptUser();
+
+        const readMe = generateMarkdown(response);
+
+        await writeFileSync("README.md", readMe)
+        console.log("Responses are completed")
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+init();
