@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const resources = require("source.js");
 const fs = require("fs");
 const util = require("util");
 //https://www.geeksforgeeks.org/node-js-fs-writefilesync-method/
@@ -46,25 +47,19 @@ function user() {
                 "BSD",
                 "None for this project"
             ],
-            name: "license"
+            name: "License"
         },
 
         {
             type: "input",
-            message: "Who are the contributers to this project?",
-            name: "Contributers",
+            message: "What is your github user name?",
+            name: "UserName",
         },
 
         {
             type: "input",
-            message: "Who are the contributers to this project?",
-            name: "Contributers",
-        },
-
-        {
-            type: "input",
-            message: "Who are the contributers to this project?",
-            name: "Contributers",
+            message: "What is your email address",
+            name: "Email",
         },
     ])
 }
