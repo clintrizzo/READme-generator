@@ -44,8 +44,9 @@ function user() {
                 "Apache",
                 "GPLv2",
                 "BSD",
-                "None",
-            ]
+                "None for this project"
+            ],
+            name: "license"
         },
 
         {
