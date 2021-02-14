@@ -38,7 +38,7 @@ function promptUser() {
 
         {
             type: "input",
-            message: "How do you test to see if the app is working properly",
+            message: "How do you test to see if the app is working properly?",
             name: "Test",
         },
 
@@ -70,7 +70,7 @@ function promptUser() {
     ])
 }
 
-function generateMarkdown(response) {
+function generateMarkdown(user) {
     //https://shields.io/category/license(for the licenses)
     return `
     # ${user.Title}
@@ -86,34 +86,34 @@ function generateMarkdown(response) {
     - [Responses](#Responses)
     
     ## Description:
-    ![License](https://img.shields.io/badge/License-${response.License}-red.svg "License Badge")
-    ${response.Description}
+    ![License](https://img.shields.io/badge/License-${user.License}-red.svg "License Badge")
+    ${user.Description}
     
     ## Installation:
-    ${response.Installation}
+    ${user.Installation}
     
     ## Usage:
-    ${response.Usage}
+    ${user.Usage}
     
     ## Contributers:
-    ${response.Contributers}
+    ${user.Contributers}
 
     ## Test:
-    ${response.Test}
+    ${user.Test}
 
     ## Questions:
     To see deployed site look at my GitHub page
-    - [Profile](github.com/${response.UserName})
+    - [Profile](github.com/${user.UserName})
 
-    For additional information or questions please reach out to my email: ${response.Email}
+    For additional information or questions please reach out to my email: ${user.Email}
     `
 }
 
 async function init() {
     try {
-        const response = await promptUser();
+        const user = await promptUser();
 
-        const readMe = generateMarkdown(response);
+        const readMe = generateMarkdown(user);
 
         await writeFileAsync("README.md", readMe)
         console.log("Responses are completed")
