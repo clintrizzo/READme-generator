@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
+//https://nodejs.org/api/util.html
 //https://www.npmjs.com/package/util
 const util = require("util");
 //https://www.codota.com/code/javascript/functions/fs/writeFileAsync
@@ -70,8 +71,10 @@ function promptUser() {
     ])
 }
 
+
+//https: //www.markdownguide.org/api/v1/
+//https://shields.io/category/license(for the licenses)
 function generateMarkdown(user) {
-    //https://shields.io/category/license(for the licenses)
     return `
     # ${user.Title}
     
@@ -87,6 +90,8 @@ function generateMarkdown(user) {
     
     ## Description:
     ![License](https://img.shields.io/badge/License-${user.License}-red.svg "License Badge")
+   
+    - Info on how the project works:
     ${user.Description}
     
     ## Installation:
@@ -101,7 +106,7 @@ function generateMarkdown(user) {
     ## Test:
     ${user.Test}
 
-    ## Questions:
+    ## My info:
     To see deployed site look at my GitHub page
     - [Profile](github.com/${user.UserName})
 
@@ -109,6 +114,7 @@ function generateMarkdown(user) {
     `
 }
 
+//https://javascript.info/async-await
 async function init() {
     try {
         const user = await promptUser();
