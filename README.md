@@ -36,4 +36,7 @@ To see deployed site look at my GitHub page
 For additional information or questions please reach out to my email: clint.rizzo92@gmail.com
     
 ## Videos and Pictures 
-- [video]()
+- [video](https://youtu.be/7fdDhJHIG8s)
+
+- ![image](screenshot.png)
+- ![image](screenshot1.png)
