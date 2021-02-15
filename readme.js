@@ -106,7 +106,7 @@ function generateMarkdown(user) {
     ## Test:
     ${user.Test}
 
-    ## My info:
+    ## My-info:
     To see deployed site look at my GitHub page
     - [Profile](github.com/${user.UserName})
 
