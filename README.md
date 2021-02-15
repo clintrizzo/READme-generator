@@ -9,12 +9,13 @@
   - [Usage:](#usage)
   - [Contributers:](#contributers)
   - [Test:](#test)
-  - [Questions:](#questions)
+  - [My-info:](#my-info)
   - [Videos and Pictures](#videos-and-pictures)
     
 ## Description:
 ![License](https://img.shields.io/badge/License--red "License Badge")
 
+- Info on how the project works:
 User can create a readme file using this app by going through their teriminal and answering a few questions
     
 ## Installation:
@@ -29,7 +30,7 @@ Clint Rizzo
 ## Test:
 User can test the site by using bash or their terminal. User can also use the integrated teriminal in visual studios to test the app
 
-## Questions:
+## My-info:
 To see deployed site look at my GitHub page
 - [Profile](github.com/github.com/clintrizzo)
 
