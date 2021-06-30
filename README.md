@@ -16,7 +16,7 @@
 ![License](https://img.shields.io/badge/License--red "License Badge")
 
 - Info on how the project works:
-User can create a readme file using this app by going through their teriminal and answering a few questions
+This application is a complete backend project using Node.JS (No deployed site). User can create a readme file using this app by going through their teriminal and answering a few questions
     
 ## Installation:
 User must install node as well as inquirer, fs, and util for app to work correctly
