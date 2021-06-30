@@ -9,8 +9,8 @@
   - [Usage:](#usage)
   - [Contributers:](#contributers)
   - [Test:](#test)
-  - [My-info:](#my-info)
   - [Videos and Pictures](#videos-and-pictures)
+  - [My-info:](#my-info)
     
 ## Description:
 ![License](https://img.shields.io/badge/License--red "License Badge")
@@ -29,15 +29,12 @@ Clint Rizzo
 
 ## Test:
 User can test the site by using bash or their terminal. User can also use the integrated teriminal in visual studios to test the app
-
-## My-info:
-To see deployed site look at my GitHub page
-- [Profile](github.com/github.com/clintrizzo)
-
-For additional information or questions please reach out to my email: clint.rizzo92@gmail.com
     
 ## Videos and Pictures 
 - [video](https://youtu.be/7fdDhJHIG8s)
 
 - ![image](screenshot.png)
 - ![image](screenshot1.png)
+
+## My-info:
+For additional information or questions please reach out to my email: clint.rizzo92@gmail.com
